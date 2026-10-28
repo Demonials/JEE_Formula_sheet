@@ -2,11 +2,6 @@
 
 FORMION turns the original JEE formula reference into a light, responsive study workspace for desktop and mobile.
 
-## Brand assets
-
-- `assets/formion-logo.jpg` is the primary FORMION logo used by the splash screen, sidebar mark, browser favicon, and Apple touch icon.
-- `manifest.json` exposes the same brand asset as the app icon for installable-browser experiences.
-
 ## Workspace
 
 - **Overview** — subject shortcuts, revision progress, quick formula recall and a daily checklist.
