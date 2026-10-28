@@ -27,7 +27,7 @@ Then open http://localhost:8000.
 
 ## Important formula-accuracy note
 
-The original database contained **1,184 entries**, including repeated formula expressions within the same subject/class/chapter. The bundled `data.js` and `data.json` have now been deduplicated to **1,064 entries** using normalized expression matching within each subject, class, and chapter.
+The original database contained **1,184 entries**, including repeated formula expressions within the same subject/class/chapter. The bundled `data.js` and `data.json` have now been deduplicated to **1,054 entries** using normalized expression matching within each subject and class, across chapters.
 
 This is a data-cleanup step—not proof that the database contains every formula, special case, identity, derivation, or exam-relevant relation. The Syllabus Audit is a chapter-level warning system, not a mathematical certification. A true “every formula” claim requires a chapter-by-chapter comparison against the current official JEE Main and JEE Advanced syllabi, expert review of formula conditions and notation, and tests for omitted relations.
 
