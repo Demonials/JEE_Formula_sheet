@@ -128,3 +128,15 @@
 @keyframes gridDrift{to{background-position:38px 38px}}
 @media(max-width:420px){.motion-stage{height:210px;width:min(330px,94vw);margin-bottom:3px}.splash-meta{font-size:6px;letter-spacing:1px}.splash-tagline{letter-spacing:1.8px}}
 @media(prefers-reduced-motion:reduce){.splash-grid{animation:none}.motion-path,.motion-ring,.motion-node,.motion-cross,.splash-mark,.splash-word,.splash-tagline,.splash-meta{animation:none;opacity:1;transform:none}.splash-line i{animation:none;width:100%}}
+
+/* Official FORMION brand mark */
+.brand-logo-crop{overflow:hidden;background:#f5f1e3;border:1px solid #e8e3d5;box-shadow:none}
+.brand-logo-crop img{width:100%;height:100%;object-fit:cover;object-position:center 14%;transform:scale(1.18)}
+.splash-logo{position:relative;z-index:2;width:min(310px,78vw);height:auto;aspect-ratio:1;object-fit:contain;border-radius:24%;box-shadow:0 24px 70px #183e3218;animation:logoReveal .9s cubic-bezier(.2,.8,.2,1) both}
+#splash .motion-stage{height:300px;margin-bottom:0}
+#splash .motion-graphic{opacity:.8}
+#splash .splash-line{margin-top:18px}
+#splash .splash-meta{margin-top:12px}
+@keyframes logoReveal{0%{opacity:0;transform:translateY(10px) scale(.94)}100%{opacity:1;transform:translateY(0) scale(1)}}
+@media(max-width:420px){#splash .motion-stage{height:min(78vw,290px);width:100%}.splash-logo{width:min(78vw,290px)}}
+@media(prefers-reduced-motion:reduce){.splash-logo{animation:none}}
