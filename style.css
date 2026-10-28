@@ -99,3 +99,32 @@
   .hero-index{left:16px}
   .hero-photo-index{right:11px;top:11px}
 }
+
+/* FORMION kinetic intro — restrained motion graphics, not a stock GIF */
+#splash{gap:0;overflow:hidden;background:#f4f5ed;color:#183e32;isolation:isolate}
+.splash-grid{position:absolute;inset:-15%;opacity:.35;background-image:linear-gradient(#7e9b8418 1px,transparent 1px),linear-gradient(90deg,#7e9b8418 1px,transparent 1px);background-size:38px 38px;mask-image:radial-gradient(ellipse at center,#000 0%,transparent 72%);animation:gridDrift 7s linear infinite}
+.motion-stage{position:relative;width:min(360px,88vw);height:240px;display:grid;place-items:center;margin-bottom:8px}
+.motion-graphic{position:absolute;inset:0;width:100%;height:100%;overflow:visible}
+.motion-path{stroke:#6e9a7a;stroke-width:1.2;stroke-linecap:round;stroke-linejoin:round;stroke-dasharray:5 9;opacity:0;animation:pathDraw 1.2s cubic-bezier(.22,.8,.25,1) forwards}
+.path-one{animation-delay:.08s}.path-two{stroke:#c0d28a;animation-delay:.22s}.path-three{stroke:#d98e73;animation-delay:.14s}
+.motion-ring{transform-origin:181px 119px;stroke:#b8cbb8;stroke-width:1;stroke-dasharray:3 7;opacity:0;animation:ringIn .9s ease-out forwards}
+.ring-one{animation-delay:.1s}.ring-two{stroke:#d9a08a;stroke-dasharray:1 8;animation-delay:.22s}.ring-three{stroke:#8db79a;stroke-dasharray:36 7;animation-delay:.32s}
+.motion-node{fill:#176b52;opacity:0;animation:nodePop .4s .65s cubic-bezier(.2,.8,.2,1) forwards}
+.node-two{fill:#e78165;animation-delay:.78s}.node-three{fill:#9bbd64;animation-delay:.9s}
+.motion-cross{stroke:#9bb59c;stroke-width:1;stroke-linecap:round;stroke-dasharray:4 5;opacity:0;animation:fadeUp .5s .4s forwards}
+.splash-mark{width:78px;height:78px;border-radius:24px;background:#176b52;box-shadow:0 12px 35px #176b5224;animation:markIn .65s .25s cubic-bezier(.16,1,.3,1) both;z-index:2}
+.splash-mark span{font:800 43px Manrope;color:#fff;transform:translateY(-1px)}
+.splash-mark i{width:10px;height:10px;right:10px;top:10px;background:#d7f078;box-shadow:0 0 0 4px #ffffff20;animation:nodePulse 1.8s .6s ease-in-out infinite}
+.splash-word{font:800 clamp(25px,6vw,30px) Manrope;letter-spacing:4px;line-height:1.2;margin-top:2px;animation:fadeUp .65s .45s both}
+.splash-word span{color:#e78165}
+.splash-tagline{font-size:9px;letter-spacing:2.4px;font-weight:700;color:#7d8d80;margin-top:12px;animation:fadeUp .6s .58s both;text-align:center}
+.splash-line{width:156px;height:2px;background:#dce4d9;border-radius:0;margin-top:24px;overflow:hidden}
+.splash-line i{width:28%;background:#176b52;animation:loading 1.25s cubic-bezier(.65,0,.35,1) infinite}
+.splash-meta{width:min(300px,82vw);display:flex;justify-content:space-between;gap:14px;margin-top:13px;color:#a0aca0;font-size:7px;letter-spacing:1.3px;animation:fadeUp .5s .7s both}
+@keyframes pathDraw{0%{opacity:0;stroke-dashoffset:180}15%{opacity:.8}100%{opacity:.58;stroke-dashoffset:0}}
+@keyframes ringIn{0%{opacity:0;transform:scale(.62) rotate(-35deg)}100%{opacity:.68;transform:scale(1) rotate(0)}}
+@keyframes nodePop{0%{opacity:0;transform:scale(.1)}100%{opacity:1;transform:scale(1)}}
+@keyframes nodePulse{0%,100%{box-shadow:0 0 0 4px #ffffff20}50%{box-shadow:0 0 0 8px #d7f07812}}
+@keyframes gridDrift{to{background-position:38px 38px}}
+@media(max-width:420px){.motion-stage{height:210px;width:min(330px,94vw);margin-bottom:3px}.splash-meta{font-size:6px;letter-spacing:1px}.splash-tagline{letter-spacing:1.8px}}
+@media(prefers-reduced-motion:reduce){.splash-grid{animation:none}.motion-path,.motion-ring,.motion-node,.motion-cross,.splash-mark,.splash-word,.splash-tagline,.splash-meta{animation:none;opacity:1;transform:none}.splash-line i{animation:none;width:100%}}
